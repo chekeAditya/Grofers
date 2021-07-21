@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "398623873439",
+    "project_id": "groferapplication",
+    "storage_bucket": "groferapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398623873439:android:290beaf2a3b70ebe0545aa",
+        "android_client_info": {
+          "package_name": "com.example.grofer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398623873439-oq49e9ocs7t92qbac3g7bv8ab4j7v4m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4bD9AauC6qu1zaue4jTy4rjgGJElvl60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398623873439-oq49e9ocs7t92qbac3g7bv8ab4j7v4m5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

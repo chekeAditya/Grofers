@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">grofer</string>
+    <string name="grofers">grofers</string>
+    <string name="login">Login</string>
+    <string name="confirmation">We will send on SMS with a confirmation code to this number</string>
+    <string name="_91">+91</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="next">Next</string>
+    <string name="one_touch_login_with_truecaller">One touch login with Truecaller</string>
+    <string name="search_products_categories"><![CDATA[Search products & categories]]></string>
 </resources>

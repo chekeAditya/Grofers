@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeIcon"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home"/>
+    <item
+        android:id="@+id/categoriesIcon"
+        android:icon="@drawable/ic_noun_category"
+        android:title="Categories"/>
+    <item
+        android:id="@+id/offersIcon"
+        android:icon="@drawable/ic_offers"
+        android:title="Offers"/>
+    <item
+        android:id="@+id/memberShipIcon"
+        android:icon="@drawable/ic_membership"
+        android:title="Membership"/>
+
+</menu>
