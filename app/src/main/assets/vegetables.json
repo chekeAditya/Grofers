@@ -1,0 +1,53 @@
+{
+  "vegetable": [
+    {
+      "category": "Onion",
+      "price": "35",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/Ss8VHfZ8/onion1kg.jpg",
+      "description": "G Fresh Onion"
+    },
+    {
+      "category": "Onion",
+      "price": "173",
+      "quantity" : "5kg",
+      "avatar": "https://i.postimg.cc/mkyjg2Wg/onion5kg.jpg",
+      "description": "G Fresh Onion 5 kg"
+    },
+    {
+      "category": "Potato",
+      "price": "18",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/3w0ZDZQ6/potato1kg.jpg",
+      "description": "G Fresh Potato"
+    },
+    {
+      "category": "Potato",
+      "price": "88",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/fLxj8TLf/potato5kg.jpg",
+      "description": "G Fresh Potato 5 kg"
+    },
+    {
+      "category": "Kheera",
+      "price": "16",
+      "quantity" : "500g",
+      "avatar":"https://i.postimg.cc/KvmQsLtk/cucumber.jpg",
+      "description": "G Fresh English Cucumber(Kheera)"
+    },
+    {
+      "category": "Tomato",
+      "price": "33",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/wvKQ5s6B/tomato.jpg",
+      "description": "G Fresh Tomato Hybrid"
+    },
+    {
+      "category": "Chilli",
+      "price": "9",
+      "quantity" : "100g",
+      "avatar":"https://i.postimg.cc/6Q8MfXnM/chilli.jpg",
+      "description": "G Fresh Green Chilli"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "lowPriceStore": [
+    {
+      "category": "Oil",
+      "price": "167",
+      "discount" : "20% OFF",
+      "quantity" : "1l",
+      "unlockPrice" : "Rs.166",
+      "avatar":"https://i.postimg.cc/HsTjTHmr/Mustard-Oil.jpg",
+      "description": "Grofers Mother's Choice Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Atta",
+      "price": "138",
+      "discount" : "18% OFF",
+      "quantity" : "5kg",
+      "unlockPrice" : "Rs.136",
+      "avatar":"https://i.postimg.cc/HLFVmyWm/Atta.jpg",
+      "description": "Chakki Atta"
+    },
+    {
+      "category": "Oil",
+      "price": "161",
+      "discount" : "19% OFF",
+      "quantity" : "1l",
+      "unlockPrice" : "Rs.160",
+      "avatar":"https://i.postimg.cc/2y76n9Qj/Soyabean-Oil.jpg",
+      "description": "Groffers Mother's Choice Refined Soyabean Oil"
+    },
+    {
+      "category": "Sugar",
+      "price": "41",
+      "discount" : "31% OFF",
+      "quantity" : "1kg",
+      "unlockPrice" : "Rs.29",
+      "avatar":"https://i.postimg.cc/cLHH8mrZ/Sugar.jpg",
+      "description": "Grocery Sugar"
+    },
+    {
+      "category": "Almonds",
+      "price": "689",
+      "discount" : "37% OFF",
+      "quantity" : "1kg",
+      "unlockPrice" : "Rs.682",
+      "avatar":"https://i.postimg.cc/4ygy7RhF/Almonds.jpg",
+      "description": "Grofers Mother's Choice American Almonds"
+    },
+    {
+      "category": "Sauce",
+      "price": "74",
+      "discount" : "38% OFF",
+      "quantity" : "950g",
+      "unlockPrice" : "Rs.71",
+      "avatar":"https://i.postimg.cc/K8HY7MMT/Tomato-Ketcup.jpg",
+      "description": "Grofers Happy Day Tomato Ketchup-950 g"
+    },
+    {
+      "category": "Pasta",
+      "price": "59",
+      "discount" : "25% OFF",
+      "quantity" : "500g",
+      "unlockPrice" : "Rs.57",
+      "avatar":"https://i.postimg.cc/QNQHLC2L/Pasta.jpg",
+      "description": "Grofers Happy Day Penne Pasta-500g"
+    },
+    {
+      "category": "Noddels",
+      "price": "68",
+      "discount" : "35% OFF",
+      "quantity" : "3x150g",
+      "unlockPrice" : "Rs.65",
+      "avatar":"https://i.postimg.cc/FsGzRqFD/Noodles.jpg",
+      "description": "Grofers Happy Day Veg Hakka Noodles-Pack of 3"
+    },
+    {
+      "category": "Vinegar",
+      "price": "39",
+      "discount" : "40% OFF",
+      "quantity" : "180ml",
+      "unlockPrice" : "Rs.37",
+      "avatar":"https://i.postimg.cc/cJtLFLRb/Vinegar.jpg",
+      "description": "Grofers Mother's Choice Vinegar"
+    },
+    {
+      "category": "Honey",
+      "price": "199",
+      "discount" : "48% OFF",
+      "quantity" : "1kg",
+      "unlockPrice" : "Rs.193",
+      "avatar":"https://i.postimg.cc/0Qmryyrw/Honey.jpg",
+      "description": "Grofers Happy Day Honey(Pet Jar)-1kg"
+    },
+    {
+      "category": "Jam",
+      "price": "80",
+      "discount" : "36% OFF",
+      "quantity" : "500g",
+      "unlockPrice" : "Rs.58",
+      "avatar":"https://i.postimg.cc/8C7jxHSw/FruitJam.jpg",
+      "description": "Grofers Happy Day Mixed Fruit Jam"
+    }
+  ]
+}

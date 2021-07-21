@@ -1,0 +1,173 @@
+{
+  "grocery": [
+    {
+      "category" : "Oil",
+      "price": "160",
+      "discount" : "20% OFF",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/B6cxGSFZ/fortune1-Lsoya.jpg",
+      "description": "Fortune Soya Health Refined soyabean Oil"
+    },
+    {
+      "category" : "Oil",
+      "price": "164",
+      "discount" : "26% OFF",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/K8Rrgh6Q/fortune1-Lmustard.jpg",
+      "description": "Fortune Premium Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Oil",
+      "price": "167",
+      "discount" : "20% OFF",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/4N3prTxZ/Mother-Choice1-Lmustard-Oil.jpg",
+      "description": "Grofers Mother's Choice Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Oil",
+      "price": "856",
+      "discount" : "31% OFF",
+      "quantity" : "5l",
+      "avatar":"https://i.postimg.cc/g0hVNqkZ/Fortune5-LMustard-Oil.jpg",
+      "description": "Fortune Premium Kachi Ghani Mustard Oil-5L(Jar)"
+    },
+    {
+      "category": "Sugar",
+      "price": "41",
+      "discount" : "31% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/cLHH8mrZ/Sugar.jpg",
+      "description": "Grocery Sugar"
+    },
+    {
+      "category": "Almonds",
+      "price": "689",
+      "discount" : "37% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/4ygy7RhF/Almonds.jpg",
+      "description": "Grofers Mother's Choice American Almonds"
+    },
+    {
+      "category": "Sauce",
+      "price": "74",
+      "discount" : "38% OFF",
+      "quantity" : "950g",
+      "avatar":"https://i.postimg.cc/K8HY7MMT/Tomato-Ketcup.jpg",
+      "description": "Grofers Happy Day Tomato Ketchup-950 g"
+    },
+    {
+      "category": "Pasta",
+      "price": "59",
+      "discount" : "25% OFF",
+      "quantity" : "500g",
+      "avatar":"https://i.postimg.cc/QNQHLC2L/Pasta.jpg",
+      "description": "Grofers Happy Day Penne Pasta-500g"
+    },
+    {
+      "category": "Atta",
+      "price": "138",
+      "discount" : "18% OFF",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/HLFVmyWm/Atta.jpg",
+      "description": "Chakki Atta"
+    },
+    {
+      "category": "Oil",
+      "price": "161",
+      "discount" : "19% OFF",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/2y76n9Qj/Soyabean-Oil.jpg",
+      "description": "Groffers Mother's Choice Refined Soyabean Oil"
+    },
+
+    {
+      "category": "Noodles",
+      "price": "68",
+      "discount" : "35% OFF",
+      "quantity" : "3x150g",
+      "avatar":"https://i.postimg.cc/FsGzRqFD/Noodles.jpg",
+      "description": "Grofers Happy Day Veg Hakka Noodles-Pack of 3"
+    },
+    {
+      "category": "Vinegar",
+      "price": "39",
+      "discount" : "40% OFF",
+      "quantity" : "180ml",
+      "avatar":"https://i.postimg.cc/cJtLFLRb/Vinegar.jpg",
+      "description": "Grofers Mother's Choice Vinegar"
+    },
+    {
+      "category": "Honey",
+      "price": "199",
+      "discount" : "48% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/0Qmryyrw/Honey.jpg",
+      "description": "Grofers Happy Day Honey(Pet Jar)-1kg"
+    },
+    {
+      "category": "Jam",
+      "price": "80",
+      "discount" : "36% OFF",
+      "quantity" : "500g",
+      "avatar":"https://i.postimg.cc/8C7jxHSw/FruitJam.jpg",
+      "description": "Grofers Happy Day Mixed Fruit Jam"
+    },
+    {
+      "category": "rice",
+      "price": "197",
+      "discount" : "6% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/qBw8b70j/classic1kg.jpg",
+      "description": "Indian Gate Classic Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "349",
+      "discount" : "26% OFF",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/pTtD7hp1/Feast-Rozana5-Kg.jpg",
+      "description": "India Gate Feast Rozzana Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "249",
+      "discount" : "18% OFF",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/j2MPLMvG/Mogra5Kg.jpg",
+      "description": "India Gate Mongra Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "95",
+      "discount" : "22% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/6qWCWkVr/Dubar1Kg.jpg",
+      "description": "India Gate Dubar Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "105",
+      "discount" : "17% OFF",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/jdkyTkDf/Tibar1Kg.jpg",
+      "description": "India Gate Tibar Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "265",
+      "discount" : "10% OFF",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/y8thmrBK/Mini-Mogra5-Kg.jpg",
+      "description": "India Gate Mini Broken Mongra Basmati Rice"
+    },
+    {
+      "category": "rice",
+      "price": "289",
+      "discount" : "31% OFF",
+      "quantity" : "5kg",
+      "avatar":"https://i.postimg.cc/htzTtbm5/unity5Kg.jpg",
+      "description": "Unity Rozzana Basmati Rice"
+    }
+  ]
+}
