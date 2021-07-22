@@ -14,7 +14,7 @@
         android:background="@drawable/rectangle"
         android:id="@+id/viewHomeActivity"
         android:layout_height="55dp">
-
+a
         <EditText
             android:id="@+id/etText"
             android:drawablePadding="@dimen/dp_20"
