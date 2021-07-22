@@ -33,7 +33,7 @@ public class MembershipActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 
         //set home Selected
-        bottomNavigationView.setSelectedItemId(R.id.homeIcon);
+        bottomNavigationView.setSelectedItemId(R.id.memberShipIcon);
 
         //perform itemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
