@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.HomeAcitivity">
+    android:orientation="vertical"
+    tools:context=".HomeAcitivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
 
   <androidx.cardview.widget.CardView
       app:layout_constraintTop_toTopOf="parent"
@@ -23,8 +28,9 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/dp_10"
         android:background="@drawable/rectangle"
-        android:hint="Pune"
-        android:drawableStart="@drawable/ic_baseline_location_on_24"/>
+        android:hint="@string/pune"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        />
 
   </androidx.cardview.widget.CardView>
 
@@ -62,15 +68,378 @@
       android:hint="@string/search_products_categories"
       android:drawableStart="@drawable/ic_baseline_search_24"/>
 
-  <androidx.cardview.widget.CardView
-      app:layout_constraintStart_toStartOf="parent"
-      android:layout_margin="5dp"
-      app:cardElevation="@dimen/dp_20"
-      app:cardCornerRadius="@dimen/dp_5"
-      app:layout_constraintBottom_toBottomOf="parent"
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
+      app:layout_constraintTop_toBottomOf="@id/etSearchProduct"
       android:layout_height="wrap_content"
-      android:elevation="@dimen/dp_20">
+      app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+      android:layout_marginTop="@dimen/dp_15"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+
+      <ImageView
+          android:id="@+id/ivCalender"
+          android:layout_width="@dimen/dp_50"
+          android:layout_height="@dimen/dp_50"
+          android:layout_margin="@dimen/dp_10"
+          android:src="@drawable/calendar"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <ImageView
+          android:id="@+id/ivGiftCards"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/dp_10"
+          android:contentDescription="@string/todo"
+          android:src="@drawable/giftcards"
+          app:layout_constraintEnd_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tvLowestPrices" />
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:src="@drawable/person"
+          app:layout_constraintBottom_toTopOf="@id/ivGiftCards"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@+id/tvFastDelivery" />
+
+      <TextView
+          android:id="@+id/tvEarliestSlot"
+          style="@style/TextViewEarliestSlot"
+          android:layout_marginStart="@dimen/dp_20"
+          android:text="@string/earliest_slot_tomorrow_7_pm"
+          app:layout_constraintStart_toEndOf="@id/ivCalender"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <TextView
+          android:id="@+id/tvLimitedSlot"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dp_20"
+          android:layout_marginTop="@dimen/dp_10"
+          android:text="@string/limited_slots_only"
+          android:textSize="12sp"
+          app:layout_constraintStart_toEndOf="@+id/ivCalender"
+          app:layout_constraintTop_toBottomOf="@+id/tvEarliestSlot" />
+
+      <TextView
+          android:id="@+id/tvWelcome"
+          style="@style/TextViewEarliestSlot"
+          android:layout_marginStart="@dimen/dp_20"
+          android:layout_marginTop="30dp"
+          android:text="@string/welcome_to_grofers"
+          android:textSize="@dimen/dp_22"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tvLimitedSlot" />
+
+      <TextView
+          android:id="@+id/tvFastDelivery"
+          style="@style/textViewNormalSide"
+          android:drawableStart="@drawable/ic_deliivery_van"
+          android:drawablePadding="@dimen/dp_20"
+          android:text="fast delivery"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tvWelcome" />
+
+      <TextView
+          android:id="@+id/tvLowestPrices"
+          style="@style/textViewNormalSide"
+          android:drawableStart="@drawable/ic_percentage"
+          android:drawablePadding="@dimen/dp_20"
+          android:text="lowest price"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/tvFastDelivery" />
+
+      <View
+          android:id="@+id/viewHomeActivityLine"
+          android:layout_width="match_parent"
+          android:layout_height="4dp"
+          android:layout_marginTop="@dimen/dp_20"
+          android:background="@color/cyan"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/ivGiftCards" />
+
+      <com.smarteist.autoimageslider.SliderView
+          android:id="@+id/imageSlider"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="@dimen/dp_20"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/viewHomeActivityLine"
+          app:sliderAnimationDuration="600"
+          app:sliderAutoCycleDirection="back_and_forth"
+          app:sliderIndicatorAnimationDuration="600"
+          app:sliderIndicatorEnabled="true"
+          app:sliderIndicatorGravity="center_horizontal|bottom"
+          app:sliderIndicatorMargin="15dp"
+          app:sliderIndicatorOrientation="horizontal"
+          app:sliderIndicatorPadding="3dp"
+          app:sliderIndicatorRadius="2dp"
+          app:sliderIndicatorSelectedColor="#5A5A5A"
+          app:sliderIndicatorUnselectedColor="#FFF"
+          app:sliderScrollTimeInSec="1" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dp_10"
+          android:id="@+id/cardViewCategories"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/imageSlider">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/tvBrowseCategories"
+              style="@style/TextViewEarliestSlot"
+              android:layout_marginStart="@dimen/dp_20"
+              android:layout_marginTop="30dp"
+              android:text="@string/browse_categories"
+              android:textSize="@dimen/dp_22" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/browseRecyclerView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+               />
+
+          <TextView
+              android:id="@+id/tvOtherSupplies"
+              style="@style/TextViewEarliestSlot"
+              android:layout_marginStart="@dimen/dp_20"
+              android:layout_marginTop="@dimen/dp_20"
+              android:text="@string/other_supplies"
+              android:textSize="@dimen/dp_22" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/otherSuppliesRecycler"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/view_all_categories"
+          android:textColor="@color/orange"
+          android:textAllCaps="false"
+          android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+          android:background="@drawable/rectangle_bg_orange"
+          app:layout_constraintStart_toStartOf="parent"
+          android:drawablePadding="100dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_margin="@dimen/dp_10"/>
+
+        </LinearLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <View
+          app:layout_constraintTop_toBottomOf="@+id/cardViewCategories"
+          android:id="@+id/viewHomeActivity3"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"/>
+
+      <Button
+        android:id="@+id/btnExploreCategories"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@drawable/add8"
+          android:layout_margin="10dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/viewHomeActivity3"/>
+
+      <View
+          app:layout_constraintTop_toBottomOf="@+id/btnExploreCategories"
+          android:id="@+id/viewHomeActivity4"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"/>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="@dimen/dp_10"
+          android:id="@+id/cardFruitsVegetables"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/viewHomeActivity4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+          <TextView
+              android:id="@+id/tvFruitsVegetables"
+              style="@style/TextViewEarliestSlot"
+              android:layout_marginStart="@dimen/dp_20"
+              android:layout_marginTop="30dp"
+              android:text="@string/fruits_vegetables"
+              android:textSize="@dimen/dp_22" />
+
+          <TextView
+              android:layout_alignParentEnd="true"
+              android:id="@+id/seeMore"
+              style="@style/TextViewEarliestSlot"
+              android:layout_marginStart="@dimen/dp_20"
+              android:layout_marginTop="30dp"
+              android:text="@string/see_more"
+              android:layout_marginEnd="@dimen/dp_10"
+              android:textColor="@color/orange"
+              android:textSize="@dimen/dp_18" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_below="@id/tvFruitsVegetables"
+              android:layout_marginTop="@dimen/dp_10"
+              android:layout_margin="@dimen/dp_10"
+              android:id="@+id/fruitsVegetablesRecyclerViewOne"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:layout_below="@id/fruitsVegetablesRecyclerViewOne"
+              android:layout_marginTop="@dimen/dp_10"
+              android:layout_margin="@dimen/dp_10"
+              android:id="@+id/fruitsVegetablesRecyclerView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+      </androidx.cardview.widget.CardView>
+
+      <View
+          android:id="@+id/viewHomeActivity5"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cardFruitsVegetables"
+          android:layout_width="match_parent"
+          android:layout_height="5dp"
+          android:background="@color/cyan"/>
+
+      <Button
+          android:id="@+id/btnEverydayFreshDeals"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/viewHomeActivity5"
+          android:layout_width="match_parent"
+          android:background="@drawable/add12"
+          android:layout_height="wrap_content"/>
+
+      <View
+          android:id="@+id/viewHomeActivity6"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/btnEverydayFreshDeals"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:background="@color/cyan"/>
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:id="@+id/cardViewChhotimotishopping"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/viewHomeActivity6"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/dp_20"
+          app:cardElevation="20dp"
+          app:cardCornerRadius="@dimen/dp_10">
+
+        <Button
+            android:id="@+id/btnChotiMotiShoppingBhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          android:background="@drawable/add9"/>
+
+      </androidx.cardview.widget.CardView>
+
+      <View
+          android:id="@+id/viewHomeActivity7"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cardViewChhotimotishopping"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="@dimen/dp_20"
+          android:background="@color/cyan"/>
+
+      <TextView
+          android:id="@+id/tvGrofersSpotLight"
+          style="@style/TextViewEarliestSlot"
+          android:layout_marginStart="@dimen/dp_20"
+          android:layout_marginTop="10dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/viewHomeActivity7"
+          android:text="@string/grofers_spotlight"
+          android:textSize="@dimen/dp_22" />
+
+      <androidx.cardview.widget.CardView
+          android:layout_width="match_parent"
+          android:background="#0267F6"
+          android:id="@+id/cardBuy1Get1"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/tvGrofersSpotLight"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/dp_20"
+          app:cardElevation="20dp"
+          app:cardCornerRadius="@dimen/dp_10">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/add11"/>
+
+      </androidx.cardview.widget.CardView>
+
+      <View
+          android:id="@+id/viewHomeActivity8"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/cardBuy1Get1"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="@dimen/dp_20"
+          android:background="@color/cyan"/>
+
+      <Button
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/viewHomeActivity8"
+          android:background="@drawable/add10"
+          android:id="@+id/btnSuperiorStainRemoveAll"/>
+
+      <View
+          android:id="@+id/viewHomeActivity9"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/btnSuperiorStainRemoveAll"
+          android:layout_width="match_parent"
+          android:layout_height="3dp"
+          android:layout_marginTop="@dimen/dp_20"
+          android:background="@color/cyan"/>
+
+      <Button
+          android:id="@+id/btnDidntFindWhatYourAreLookingFor"
+          app:layout_constraintStart_toStartOf="parent"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@id/viewHomeActivity9"
+          android:background="@drawable/add"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationBar"
@@ -83,8 +452,6 @@
         android:defaultFocusHighlightEnabled="true"
         android:outlineSpotShadowColor="@color/black"
         app:itemTextColor="@drawable/selector"
-        app:itemIconTint="@drawable/selector"
-        android:layout_alignParentBottom="true" />
-  </androidx.cardview.widget.CardView>
+        app:itemIconTint="@drawable/selector" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
