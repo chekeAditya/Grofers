@@ -14,20 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
         <activity android:name=".Profile"></activity>
-        <activity android:name=".Activity.MembershipActivity" />
-        <activity android:name=".Activity.OfferActivity" />
-        <activity android:name=".Activity.CategoryActivity" />
-        <activity android:name=".Activity.HomeAcitivity" />
-        <activity android:name=".VerifyPhoneNumber" />
-        <activity android:name=".oAuth" />
-        <activity
-            android:name=".Activity.SplashScreen"
-            android:theme="@style/Theme.SplashScreen">
+        <activity android:name=".MembershipActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".OfferActivity" />
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".HomeAcitivity" />
+        <activity android:name=".VerifyPhoneNumber" />
+        <activity android:name=".oAuth" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/Theme.SplashScreen">
+
         </activity>
 
         <meta-data
