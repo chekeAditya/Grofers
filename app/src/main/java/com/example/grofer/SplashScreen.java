@@ -1,4 +1,4 @@
-package com.example.grofer.Activity;
+package com.example.grofer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -9,7 +9,6 @@ import android.os.Handler;
 import android.view.animation.LinearInterpolator;
 
 import com.agrawalsuneet.dotsloader.loaders.LazyLoader;
-import com.example.grofer.R;
 
 public class SplashScreen extends AppCompatActivity {
     Handler handler;

@@ -1,0 +1,39 @@
+{
+  "fruits": [
+    {
+      "category": "Apple",
+      "price": "214",
+      "quantity" : "4 units",
+      "avatar":"https://i.postimg.cc/ZqXVfML4/Apple.jpg",
+      "description": "G Fresh Washington Apple"
+    },
+    {
+      "category": "Orange",
+      "price": "140",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/5Nppc0mP/orange.jpg",
+      "description": "G Fresh Orange"
+    },
+    {
+      "category": "Coconut",
+      "price": "51",
+      "quantity" : "1 unit",
+      "avatar":"https://i.postimg.cc/7hkX4JcR/coconut.jpg",
+      "description": "G Fresh Brown Coconut(Nariyal)"
+    },
+    {
+      "category": "Mango",
+      "price": "92",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/1RGJHMV1/Mango.jpg",
+      "description": "G Fresh Dasheri Mango"
+    },
+    {
+      "category": "Papaya",
+      "price": "66",
+      "quantity" : "1kg",
+      "avatar":"https://i.postimg.cc/P5R4xR9Y/papaya.jpg",
+      "description": "G Fresh Papaya"
+    }
+  ]
+}

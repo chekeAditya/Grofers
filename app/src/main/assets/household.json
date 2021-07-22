@@ -1,0 +1,100 @@
+{
+  "hoseHold": [
+    {
+      "category": "HomeUse",
+      "price": "344",
+      "discount" : "11% OFF",
+      "quantity" : "6x45ml",
+      "avatar":"https://i.postimg.cc/4ymsb6rh/allout.jpg",
+      "description": "All Out Ultra-Mosquito Repellent(Refill)-6 units"
+    },
+    {
+      "category": "Laundry Detergents",
+      "price": "400",
+      "discount" : "16% OFF",
+      "quantity" : "4kg",
+      "avatar":"https://i.postimg.cc/xTPvcy6f/Surf-Excel-Easy-Wash4kg.jpg",
+      "description": "Surf Excel Easy Wash Detergent Powder"
+    },
+    {
+      "category": "HomeUse",
+      "price": "262",
+      "discount" : "6% OFF",
+      "quantity" : "3x500ml",
+      "avatar":"https://i.postimg.cc/VL0zJFqx/colin.jpg",
+      "description": "Colin Glass Cleaner Liquid Spray Bottle"
+    },
+    {
+      "category": "Dishwashers",
+      "price": "142",
+      "discount" : "16% OFF",
+      "quantity" : "750ml",
+      "avatar":"https://i.postimg.cc/zGtTkDm4/vim750ml.jpg",
+      "description": "Vim Lemon Dishwash Gel(Bottle)"
+    },
+    {
+      "category": "Dishwashers",
+      "price": "370",
+      "discount" : "0% OFF",
+      "quantity" : "1.8l",
+      "avatar":"https://i.postimg.cc/tJ3hdhyz/vim1-8L.jpg",
+      "description": "Vim Lemon Dishwash Gel(Jar)"
+    },
+    {
+      "category": "Dishwashers",
+      "price": "199",
+      "discount" : "0% OFF",
+      "quantity" : "900ml",
+      "avatar":"https://i.postimg.cc/BvjH7W4b/vim900ML.jpg",
+      "description": "Vim Lemon Dishwash Gel(Refil)"
+    },
+    {
+      "category": "Dishwashers",
+      "price": "40",
+      "discount" : "9% OFF",
+      "quantity" : "3x200g",
+      "avatar":"https://i.postimg.cc/9QFGTRkG/Vim3Bar.jpg",
+      "description": "Vim Lemon Dishwash Bar-Pack of 3-Brand Offer"
+    },
+    {
+      "category": "Dishwashers",
+      "price": "369",
+      "discount" : "16% OFF",
+      "quantity" : "2l",
+      "avatar":"https://i.postimg.cc/ZYpFhh3y/Vim2L.jpg",
+      "description": "Vim Lemon Gel Dishwash Liquid(Refil)"
+    },
+    {
+      "category": "Laundry Detergents",
+      "price": "29",
+      "discount" : "0% OFF",
+      "quantity" : "250g",
+      "avatar":"https://i.postimg.cc/prbfn0NT/surf-Excel-Big-Bar.jpg",
+      "description": "Surf Excel Stain Eraser Detergent Bar"
+    },
+    {
+      "category": "Laundry Detergents",
+      "price": "310",
+      "discount" : "35% OFF",
+      "quantity" : "2kg",
+      "avatar":"https://i.postimg.cc/GhRPLSJg/surf-Excelmatic2kg.jpg",
+      "description": "Surf Excel Matic Top Load Detergent Powder"
+    },
+    {
+      "category": "Cleaners",
+      "price": "165",
+      "discount" : "8% OFF",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/tgJN0ZtX/domex-Toilet-Cleaner1-L.jpg",
+      "description": "Domex Original Expert Toilet Cleaner"
+    },
+    {
+      "category": "Cleaners",
+      "price": "208",
+      "discount" : "22% OFF",
+      "quantity" : "2x750ml",
+      "avatar":"https://i.postimg.cc/xdZy9ftL/domex-Pack-Of2.jpg",
+      "description": "Domex Lime Fresh Toilet Cleaner(Bottle)-Pack of 2"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-package com.example.grofer.Activity;
+package com.example.grofer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,22 +7,32 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
-import com.example.grofer.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class CategoryActivity extends AppCompatActivity {
+public class MembershipActivity extends AppCompatActivity {
+
+    private ImageView mBtnImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category);
+        setContentView(R.layout.activity_membership);
+        mBtnImageView = findViewById(R.id.tvBtnRightAngle);
 
-        //init and assign variable
+        mBtnImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+    //init and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 
         //set home Selected
-        bottomNavigationView.setSelectedItemId(R.id.categoriesIcon);
+        bottomNavigationView.setSelectedItemId(R.id.memberShipIcon);
 
         //perform itemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -31,6 +41,8 @@ public class CategoryActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (bottomNavigationView.getSelectedItemId()) {
                     case R.id.categoriesIcon:
+                        startActivity(new Intent(getApplicationContext(), CategoryActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.homeIcon:
                         startActivity(new Intent(getApplicationContext(), HomeAcitivity.class));
@@ -41,8 +53,6 @@ public class CategoryActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.memberShipIcon:
-                        startActivity(new Intent(getApplicationContext(), MembershipActivity.class));
-                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return false;

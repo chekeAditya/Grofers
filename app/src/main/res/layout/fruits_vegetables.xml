@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_10"
+    android:elevation="@dimen/dp_20"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="150dp"
+            android:id="@+id/ivFruitsImage"/>
+
+        <TextView
+            android:id="@+id/tvTitleFruits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:layout_below="@id/ivFruitsImage"
+            android:text="G Frest Brown Coconut (Narial)"/>
+
+        <TextView
+            android:id="@+id/tvPriceTagFruitsVegetable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cyan"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:layout_below="@id/tvTitleFruits"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/tvPriceFruits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:layout_below="@id/tvPriceTagFruitsVegetable"
+            android:text="37"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="30dp"
+            android:text="Add"
+            android:id="@+id/btnAddFruitsVegetables"
+            android:textAllCaps="false"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@color/orange"
+            android:textColor="@color/white"
+            android:layout_below="@id/tvPriceFruits"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

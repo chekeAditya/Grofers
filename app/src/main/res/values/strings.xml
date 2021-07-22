@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">grofer</string>
     <string name="grofers">grofers</string>
@@ -8,4 +9,15 @@
     <string name="next">Next</string>
     <string name="one_touch_login_with_truecaller">One touch login with Truecaller</string>
     <string name="search_products_categories"><![CDATA[Search products & categories]]></string>
+    <string name="earliest_slot_tomorrow_7_pm">Earliest slot: Tomorrow 7 PM</string>
+    <string name="limited_slots_only">Limited Slots only</string>
+    <string name="welcome_to_grofers">welcome to grofers!</string>
+    <string name="todo">TODO</string>
+    <string name="pune">Pune</string>
+    <string name="browse_categories">Browse Categories</string>
+    <string name="other_supplies">Other Supplies</string>
+    <string name="view_all_categories">View all categories</string>
+    <string name="see_more">See more</string>
+    <string name="fruits_vegetables"><![CDATA[Fruits & Vegetables]]></string>
+    <string name="grofers_spotlight">Grofers Spotlight</string>
 </resources>

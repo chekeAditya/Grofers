@@ -1,4 +1,4 @@
-package com.example.grofer.Activity;
+package com.example.grofer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.example.grofer.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class OfferActivity extends AppCompatActivity {
@@ -21,7 +20,7 @@ public class OfferActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 
         //set home Selected
-        bottomNavigationView.setSelectedItemId(R.id.homeIcon);
+        bottomNavigationView.setSelectedItemId(R.id.offersIcon);
 
         //perform itemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

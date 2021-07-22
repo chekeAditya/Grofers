@@ -1,0 +1,46 @@
+{
+  "stationary": [
+    {
+      "clubMember" :"208 for club members",
+      "price": "215",
+      "discount" : "21% OFF",
+      "avatar":"https://i.postimg.cc/Bbksh807/Flair25.jpg",
+      "description": "Flair FWIL-5 Silkina Ball Pen-Pack of 25"
+    },
+    {
+      "clubMember" :"226 for club members",
+      "price": "234",
+      "discount" : "22% OFF",
+      "avatar": "https://i.postimg.cc/mDdTHX6s/Flair50.jpg",
+      "description": "Flair FWIL-5 Silkina Ball Pen-Pack of 50"
+    },
+    {
+      "clubMember" :"84 for club members",
+      "price": "87",
+      "discount" : "13% OFF",
+      "avatar":"https://i.postimg.cc/ZqxbTK80/Text-Highlighter.jpg",
+      "description": "Faber-Castell 154804 Text Linear Highlighter"
+    },
+    {
+      "clubMember" :"137 for club members",
+      "price": "142",
+      "discount" : "5% OFF",
+      "avatar":"https://i.postimg.cc/QNyXNzTg/white-Board-Marker.jpg",
+      "description": "Faber-Castell 155406 Whiteboard Marker"
+    },
+    {
+      "clubMember" :"74 for club members",
+      "price": "77",
+      "discount" : "0% OFF",
+      "avatar" : "https://i.postimg.cc/yNH64SSw/Fine-Multi-Marker-Set.jpg",
+      "description": "Faber-Castell Fine Multi Marker Set"
+    },
+    {
+      "clubMember" :"43 for club members",
+      "price": "90",
+      "discount" : "10%",
+      "avatar":"https://i.postimg.cc/26jz3RGG/Octane-Colour-Burst.jpg",
+      "description": "Classmate 4030210 Octane Colourburst Gel Pen"
+    }
+  ]
+}
