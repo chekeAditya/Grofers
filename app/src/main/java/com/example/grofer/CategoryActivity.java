@@ -1,4 +1,4 @@
-package com.example.grofer.Activity;
+package com.example.grofer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,36 +7,33 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.EditText;
 
-import com.example.grofer.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import org.jetbrains.annotations.NotNull;
-
-public class HomeAcitivity extends AppCompatActivity {
+public class CategoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_acitivity);
+        setContentView(R.layout.activity_category);
 
         //init and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 
         //set home Selected
-        bottomNavigationView.setSelectedItemId(R.id.homeIcon);
+        bottomNavigationView.setSelectedItemId(R.id.categoriesIcon);
 
         //perform itemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (bottomNavigationView.getSelectedItemId()) {
                     case R.id.categoriesIcon:
-                        startActivity(new Intent(getApplicationContext(), CategoryActivity.class));
-                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.homeIcon:
+                        startActivity(new Intent(getApplicationContext(), HomeAcitivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.offersIcon:
                         startActivity(new Intent(getApplicationContext(), OfferActivity.class));
@@ -52,4 +49,3 @@ public class HomeAcitivity extends AppCompatActivity {
         });
     }
 }
-

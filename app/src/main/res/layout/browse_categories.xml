@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_10"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_5"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivImageCategories"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/tvOfferCategories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Up to 55 % off"
+            android:layout_above="@+id/tvCategoriesName"
+            android:layout_centerHorizontal="true"
+            android:background="#0054D2"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_below="@+id/ivImageCategories"
+            android:id="@+id/tvCategoriesName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/dp_5"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
