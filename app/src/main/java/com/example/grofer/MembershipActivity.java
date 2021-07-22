@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -15,12 +16,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MembershipActivity extends AppCompatActivity {
 
     private ImageView mBtnImageView;
+    private Button mBtnProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_membership);
         mBtnImageView = findViewById(R.id.tvBtnRightAngle);
+        mBtnProfile = findViewById(R.id.btnProfile);
+        mBtnProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MembershipActivity.this,Profile.class);
+                startActivity(intent);
+            }
+        });
+
 
         mBtnImageView.setOnClickListener(new View.OnClickListener() {
             @Override
