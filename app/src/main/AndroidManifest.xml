@@ -13,11 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
-        <activity android:name=".LowPriceActivity"></activity>
+        <activity android:name=".MembershipActivity"></activity>
         <activity android:name=".Profile" />
-        <activity android:name=".MembershipActivity">
+        <activity android:name=".LowPriceActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -30,7 +30,6 @@
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.SplashScreen"></activity>
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

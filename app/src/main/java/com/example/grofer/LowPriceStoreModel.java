@@ -1,10 +1,6 @@
 package com.example.grofer;
-
-import javax.annotation.Generated;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
-
-@Generated("com.robohorse.robopojogenerator")
 public class LowPriceStoreModel implements Serializable {
 
 	@SerializedName("category")

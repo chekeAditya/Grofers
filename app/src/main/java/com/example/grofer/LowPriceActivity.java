@@ -51,7 +51,7 @@ public class LowPriceActivity extends AppCompatActivity {
     }
     private void loadJsonFromAsset() {
         try {
-            InputStream inputStream = getAssets().open("lowestpricestore.json");
+            InputStream inputStream = getAssets().open("lowestprice.json");
             int data = inputStream.read();
             StringBuilder stringBuilder = new StringBuilder();
             while (data != -1) {
