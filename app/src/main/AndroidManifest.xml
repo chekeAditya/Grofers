@@ -16,11 +16,6 @@
         <activity android:name=".MembershipActivity"></activity>
         <activity android:name=".Profile" />
         <activity android:name=".LowPriceActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".OfferActivity" />
         <activity android:name=".CategoryActivity" />
@@ -29,7 +24,13 @@
         <activity android:name=".oAuth" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.SplashScreen"></activity>
+            android:theme="@style/Theme.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

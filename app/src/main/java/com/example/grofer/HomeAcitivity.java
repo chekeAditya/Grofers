@@ -142,9 +142,11 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         });
     }
 
+
     @Override
     public void browseOnItemClicked(int position, BrowseCategoriesModel browseCategoriesModel) {
-
+        Intent intent = new Intent(HomeAcitivity.this,CategoryActivity.class);
+        startActivity(intent);
     }
 }
 
