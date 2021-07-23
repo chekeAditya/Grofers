@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "discount": "Up to 69% OFF",
+      "type": "Grocery & Staples",
+      "desc": "Pulses,Atta and Other Flours,Rice and Other Grains,Dry Fruits and Nuts",
+      "avatar":"https://i.postimg.cc/X7MKWSnp/grocerycategory.jpg"
+    },
+    {
+      "discount": "",
+      "type": "Vegetables & Fruits",
+      "desc": "Vegetables,Fruits,Exotic,Mangoes",
+      "avatar":"https://i.postimg.cc/3xFF9S5W/vegetablesfruitscategory.jpg"
+    },
+    {
+      "discount": "Up to 75% OFF",
+      "type": "Personal Care",
+      "desc": "New Launches,Health And Wellness,Both & Body,Hair Care",
+      "avatar":"https://i.postimg.cc/v8x7CHFJ/personalcarecategory.jpg"
+    },
+    {
+      "discount": "Up to 67% OFF",
+      "type": "Household items",
+      "desc": "Distinfectants,Buy 1 Get 1 Free,Household Best Offers,Laundry",
+      "avatar":"https://i.postimg.cc/KjTnTQDG/householdcategory.jpg"
+    },
+    {
+      "discount": "Up to 83% OFF",
+      "type": "Kitchen and Dining",
+      "desc": "Cookware,Storage & Containers,Kitchen Tools & Accessories,Dining Set",
+      "avatar":"https://i.postimg.cc/rpyCH1Mj/kitchencategory.jpg"
+    },
+    {
+      "discount": "Up to 62% OFF",
+      "type": "Biscuits,Snacks & Choclates",
+      "desc": "Pulses,Atta and Other Flours,Rice and Other Grains,Dry Fruits and Nuts",
+      "avatar":"https://i.postimg.cc/G2VF96Yg/snackscategory.jpg"
+    },
+    {
+      "discount": "Up to 65% OFF",
+      "type": "Beverages",
+      "desc": "Vegetables,Fruits,Exotic,Mangoes",
+      "avatar":"https://i.postimg.cc/j5L6xRWJ/beveragescategory.jpg"
+    },
+    {
+      "discount": "Up to 53% OFF",
+      "type": "Breakfast & Dairy",
+      "desc": "New Launches,Health And Wellness,Both & Body,Hair Care",
+      "avatar":"https://i.postimg.cc/SKZ7bnKh/breakfastcategory.jpg"
+    },
+    {
+      "discount": "Up to 71% OFF",
+      "type": "Best Values",
+      "desc": "Distinfectants,Buy 1 Get 1 Free,Household Best Offers,Laundry",
+      "avatar":"https://i.postimg.cc/ZqXVfML4/Apple.jpg"
+    },
+    {
+      "discount": "Up to 56% OFF",
+      "type": "Noodles,Sauces Instant Recepie",
+      "desc": "Cookware,Storage & Containers,Kitchen Tools & Accessories,Dining Set",
+      "avatar":"https://i.postimg.cc/ZqXVfML4/Apple.jpg"
+    },
+    {
+      "discount": "Up to 83% OFF",
+      "type": "Home Furnishing and Decore",
+      "desc": "Pulses,Atta and Other Flours,Rice and Other Grains,Dry Fruits and Nuts",
+      "avatar":"https://i.postimg.cc/X7MKWSnp/grocerycategory.jpg"
+    },
+    {
+      "discount": "Up to 50% OFF",
+      "type": "Eggs,Meat,Fish & Frozen Mutton",
+      "desc": "Vegetables,Fruits,Exotic,Mangoes",
+      "avatar":"https://i.postimg.cc/3xFF9S5W/vegetablesfruitscategory.jpg"
+    },
+    {
+      "discount": "Up to 83% OFF",
+      "type": "Lowest Price",
+      "desc": "New Launches,Health And Wellness,Both & Body,Hair Care",
+      "avatar":"https://i.postimg.cc/v8x7CHFJ/personalcarecategory.jpg"
+    },
+    {
+      "discount": "Up to 12% OFF",
+      "type": "Pet Care",
+      "desc": "Distinfectants,Buy 1 Get 1 Free,Household Best Offers,Laundry",
+      "avatar":"https://i.postimg.cc/KjTnTQDG/householdcategory.jpg"
+    },
+    {
+      "discount": "Up to 50% OFF",
+      "type": "Baby Care",
+      "desc": "Cookware,Storage & Containers,Kitchen Tools & Accessories,Dining Set",
+      "avatar":"https://i.postimg.cc/rpyCH1Mj/kitchencategory.jpg"
+    },
+    {
+      "discount": "Up to 89% OFF",
+      "type": "Home Improvement Equipment",
+      "desc": "Pulses,Atta and Other Flours,Rice and Other Grains,Dry Fruits and Nuts",
+      "avatar":"https://i.postimg.cc/G2VF96Yg/snackscategory.jpg"
+    },
+    {
+      "discount": "Up to 81% OFF",
+      "type": "Fashion and Lifestyle",
+      "desc": "Vegetables,Fruits,Exotic,Mangoes",
+      "avatar":"https://i.postimg.cc/j5L6xRWJ/beveragescategory.jpg"
+    },
+    {
+      "discount": "Up to 67% OFF",
+      "type": "Home Appliances",
+      "desc": "New Launches,Health And Wellness,Both & Body,Hair Care",
+      "avatar":"https://i.postimg.cc/SKZ7bnKh/breakfastcategory.jpg"
+    },
+    {
+      "discount": "Up to 42% OFF",
+      "type": "Books, Stationary, Toys",
+      "desc": "Distinfectants,Buy 1 Get 1 Free,Household Best Offers,Laundry",
+      "avatar":"https://i.postimg.cc/ZqXVfML4/Apple.jpg"
+    }
+  ]
+}

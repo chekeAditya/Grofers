@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/shopCard"
     android:layout_margin="5dp"
     android:layout_width="match_parent"
@@ -14,7 +14,8 @@
             android:id="@+id/ivProductImage"
             android:layout_width="140dp"
             android:layout_height="110dp"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:contentDescription="TODO" />
         <TextView
             android:id="@+id/tvDiscount"
             android:layout_width="wrap_content"
@@ -24,7 +25,7 @@
             android:layout_marginStart="6dp"
             android:layout_marginTop="20dp"
             android:textColor="#008000"
-            android:text="Up to 69% OFF"/>
+            android:text="@string/up_to_69_off"/>
         <TextView
             android:id="@+id/tvType"
             android:layout_width="wrap_content"
@@ -35,7 +36,7 @@
             android:layout_marginStart="6dp"
             android:textColor="@color/black"
             android:layout_below="@+id/tvDiscount"
-            android:text="Grocery and Staples"
+            android:text="@string/grocery_and_staples"
             android:textStyle="bold"/>
         <TextView
             android:id="@+id/tvDesc"
@@ -48,8 +49,7 @@
             android:layout_marginEnd="18dp"
             android:layout_marginTop="2dp"
             android:layout_below="@+id/tvType"
-            android:text="Pulses,Atta and Others Flours,Rice and other Grains,Dry Fruits and Nuts"
+            android:text="@string/pulses_atta_and_others_flours_rice_and_other_grains_dry_fruits_and_nuts"
             android:textStyle="bold"/>
-
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
