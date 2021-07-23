@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.grofer">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".MembershipActivity" >
+        <activity android:name=".BrowseCategoryItemClicked.browseCategories_itemClicked"></activity>
+        <activity android:name=".CartActivity" />
+        <activity android:name=".Profile" />
+        <activity android:name=".MembershipActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,13 +26,15 @@
         <activity android:name=".oAuth" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.SplashScreen">
-
-        </activity>
+            android:theme="@style/Theme.SplashScreen" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

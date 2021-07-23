@@ -20,4 +20,7 @@
     <string name="see_more">See more</string>
     <string name="fruits_vegetables"><![CDATA[Fruits & Vegetables]]></string>
     <string name="grofers_spotlight">Grofers Spotlight</string>
+    <string name="checkout">Checkout</string>
+    <string name="_12">$12</string>
+    <string name="total">Total :</string>
 </resources>

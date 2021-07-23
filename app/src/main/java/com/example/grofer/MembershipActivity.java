@@ -32,7 +32,6 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
 
-
         mBtnImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BrowseCategoryItemClicked.browseCategories_itemClicked">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMyCart"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:elevation="@dimen/dp_20">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMyCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawableStart="@drawable/ic_baseline_keyboard_backspace_24"
+                android:drawablePadding="@dimen/dp_20"
+                android:text="Special Offers on Below Things"
+                android:paddingTop="@dimen/dp_15"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:padding="@dimen/dp_20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="20dp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_below="@+id/cardViewMyCart"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
