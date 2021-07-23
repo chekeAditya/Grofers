@@ -13,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".MembershipActivity" >
+        <activity android:name=".LowPriceActivity"></activity>
+        <activity android:name=".Profile" />
+        <activity android:name=".MembershipActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,9 +29,7 @@
         <activity android:name=".oAuth" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.SplashScreen">
-
-        </activity>
+            android:theme="@style/Theme.SplashScreen"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
