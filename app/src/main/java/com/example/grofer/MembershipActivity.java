@@ -2,6 +2,7 @@ package com.example.grofer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -17,6 +18,7 @@ public class MembershipActivity extends AppCompatActivity {
 
     private ImageView mBtnImageView;
     private Button mBtnProfile;
+    private CardView mCardFaqs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class MembershipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_membership);
         mBtnImageView = findViewById(R.id.tvBtnRightAngle);
         mBtnProfile = findViewById(R.id.btnProfile);
+        mCardFaqs =findViewById(R.id.cardFaqs);
         mBtnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,10 +36,11 @@ public class MembershipActivity extends AppCompatActivity {
         });
 
 
-        mBtnImageView.setOnClickListener(new View.OnClickListener() {
+        mCardFaqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MembershipActivity.this,FAQS.class);
+                startActivity(intent);
             }
         });
     //init and assign variable
