@@ -9,12 +9,10 @@ import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.InputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
 public class LowPriceActivity extends AppCompatActivity {
     private static final String TAG = LowPriceActivity.class.getSimpleName();
     private RecyclerView recyclerView;
@@ -34,7 +32,6 @@ public class LowPriceActivity extends AppCompatActivity {
         initViewsAndListeners();
         setRecyclerAdapter();
     }
-
     private void setRecyclerAdapter() {
         lowPriceAdapter = new LowPriceAdapter(lowPriceStoreModelList);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
