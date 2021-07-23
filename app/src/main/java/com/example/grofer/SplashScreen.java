@@ -26,7 +26,7 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 2000);
+        }, 1000);
         lazyLoader = findViewById(R.id.groferLoader);
         LazyLoader loader = new LazyLoader(this, 30, 20, ContextCompat.getColor(this, R.color.loader_selected),
                 ContextCompat.getColor(this, R.color.loader_selected),
