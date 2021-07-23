@@ -3,6 +3,7 @@ package com.example.grofer.FruitsAndVegetables;
 import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 
+
 public class FruitsModel implements Serializable {
 
 	public FruitsModel(String category, String price, String quantity, String avatar, String description) {
