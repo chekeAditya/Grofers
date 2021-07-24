@@ -10,14 +10,11 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.example.grofer.BrowseCategories.BrowseCategoriesAdapter;
 import com.example.grofer.BrowseCategories.BrowseCategoriesModel;
 import com.example.grofer.BrowseCategories.BrowseItemClickListener;
-import com.example.grofer.BrowseCategoryItemClicked.browseCategories_itemClicked;
 import com.example.grofer.FruitsAndVegetables.FruitVegetableAdapterOne;
-import com.example.grofer.FruitsAndVegetables.FruitsModel;
 import com.example.grofer.FruitsAndVegetables.FruitsVegetableOne;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.smarteist.autoimageslider.SliderView;
@@ -35,7 +32,6 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         browseRecyclerView();
         otherSupplies();
         fruitsVegetablesOne();
-        fruitsVegetables();
         multipleButtonClickListener();
     }
 
@@ -52,7 +48,7 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         mBtnAddLowestPrice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeAcitivity.this,OfferActivity.class);
+                Intent intent = new Intent(HomeAcitivity.this,LowPriceActivity.class);
                 startActivity(intent);
             }
         });
@@ -65,10 +61,15 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
             }
         });
         Button btnChotiMotiShoppingBhi = findViewById(R.id.btnChotiMotiShoppingBhi);
-        btnChotiMotiShoppingBhi.setOnClickListener(new View.OnClickListener() {
+        btnChotiMotiShoppingBhi.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeAcitivity.this,MembershipActivity.class);
+            startActivity(intent);
+        });
+        Button mBtnViewAllCategories = findViewById(R.id.btnViewAllCategories);
+        mBtnViewAllCategories.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeAcitivity.this,MembershipActivity.class);
+                Intent intent = new Intent(HomeAcitivity.this, browseCategories_itemClicked.class);
                 startActivity(intent);
             }
         });
@@ -86,13 +87,6 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,4);
         mRecyclerView.setAdapter(fruitVegetableAdapterOne);
         mRecyclerView.setLayoutManager(gridLayoutManager);
-    }
-
-    private void fruitsVegetables() {
-        RecyclerView mRecyclerView = findViewById(R.id.fruitsVegetablesRecyclerView);
-        ArrayList<FruitsModel> fruitsModels = new ArrayList<>();
-//        fruitsModels.add(new FruitsModel());
-
     }
 
     private void otherSupplies() {
@@ -187,7 +181,6 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
     public void browseOnItemClicked(int position, BrowseCategoriesModel browseCategoriesModel) {
         Intent intent = new Intent(HomeAcitivity.this, browseCategories_itemClicked.class);
         startActivity(intent);
-        Toast.makeText(this, "Bird name is " , Toast.LENGTH_SHORT).show();
     }
 }
 

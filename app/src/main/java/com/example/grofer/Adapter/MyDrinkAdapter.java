@@ -57,12 +57,13 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
         Glide.with(context)
                 .load(drinkModelsList.get(position).getImage())
                 .into(holder.imageView);
-        holder.txtPrice.setText(new StringBuilder("Rs.").append(drinkModelsList.get(position).getPrice()));
+        holder.txtPrice.setText(new StringBuilder().append(drinkModelsList.get(position).getPrice()));
         holder.txtName.setText(new StringBuilder().append(drinkModelsList.get(position).getName()));
 
         //holder for item added to cart
         holder.setListener((view, adapterPosition) -> {
             addTocart(drinkModelsList.get(position));
+
         });
     }
 
@@ -77,9 +78,9 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
                         if (snapshot.exists()) { //if user already have item in cart
                             //just update and totalPrice
                             CartModel cartModel = snapshot.getValue(CartModel.class);
-                            cartModel.setQuantity(cartModel.getQuantity() +1 );//quantity changed
+                            cartModel.setQuantity(cartModel.getQuantity() + 1);
                             Map<String, Object> updateData = new HashMap<>();
-                            updateData.put("quantity", cartModel.getQuantity() +1 );//quantity changed
+                            updateData.put("quantity", cartModel.getQuantity() + 1);
                             updateData.put("totalPrice", cartModel.getQuantity()*Float.parseFloat(cartModel.getPrice()));
                             userCart.child(drinkModel.getKey())
                                     .updateChildren(updateData)
@@ -87,8 +88,8 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
                                         iCartLoadListener.onCartLoadFailed("Add to cart Success");
                                     })
                                     .addOnFailureListener(e -> {
-                                iCartLoadListener.onCartLoadFailed(e.getMessage());
-                            });
+                                        iCartLoadListener.onCartLoadFailed(e.getMessage());
+                                    });
 
 
                         } else { //if item not have in cart, add new

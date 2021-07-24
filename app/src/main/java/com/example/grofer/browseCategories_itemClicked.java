@@ -1,16 +1,18 @@
-package com.example.grofer.BrowseCategoryItemClicked;
+package com.example.grofer;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-
 import com.example.grofer.Adapter.MyDrinkAdapter;
+import com.example.grofer.CartActivity;
 import com.example.grofer.R;
 import com.example.grofer.eventBus.MyUpdateCartEvent;
 import com.example.grofer.listener.ICartLoadListener;
@@ -24,7 +26,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nex3z.notificationbadge.NotificationBadge;
-
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -67,8 +68,8 @@ public class browseCategories_itemClicked extends AppCompatActivity implements I
         super.onStop();
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN,sticky = true)
-    public void onUpdateCart(MyUpdateCartEvent event){
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void onUpdateCart(MyUpdateCartEvent event) {
         countCartItem();
     }
 
@@ -111,9 +112,11 @@ public class browseCategories_itemClicked extends AppCompatActivity implements I
         drinkLoadListener = this;
         cartLoadListener = this;
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-        recyclerDrink.setLayoutManager(gridLayoutManager);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerDrink.setLayoutManager(linearLayoutManager);
         recyclerDrink.addItemDecoration(new SpaceItemDecoration());
+
+        btnCart.setOnClickListener(v -> startActivity(new Intent(this, CartActivity.class)));
     }
 
     @Override

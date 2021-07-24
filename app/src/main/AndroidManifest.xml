@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
-        <activity android:name=".MembershipActivity"></activity>
+        <activity android:name=".ConfirmedOrder"></activity>
+        <activity android:name=".MembershipActivity" />
+        <activity android:name=".browseCategories_itemClicked" />
+        <activity android:name=".CartActivity" />
         <activity android:name=".Profile" />
-        <activity android:name=".LowPriceActivity">
-        </activity>
+        <activity android:name=".LowPriceActivity" />
         <activity android:name=".OfferActivity" />
         <activity android:name=".CategoryActivity" />
         <activity android:name=".HomeAcitivity" />
@@ -22,11 +24,12 @@
             android:name=".SplashScreen"
             android:theme="@style/Theme.SplashScreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

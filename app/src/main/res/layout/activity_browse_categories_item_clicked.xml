@@ -2,70 +2,70 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools1"
     android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BrowseCategoryItemClicked.browseCategories_itemClicked">
+    tools:context=".browseCategories_itemClicked">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/panel"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:elevation="@dimen/dp_20">
+        android:elevation="20dp">
 
-    <LinearLayout
+        <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="?android:actionBarSize"
-        android:orientation="horizontal"
-        android:weightSum="16">
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:orientation="horizontal"
+            android:weightSum="16">
 
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_arrow_back_24"
-            android:layout_weight="2"
-            android:layout_gravity="center_vertical|start"/>
-
-        <TextView
-            android:id="@+id/txtPrice"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Special Offers on Below Things"
-            android:layout_gravity="center_vertical"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:gravity="center"
-            android:layout_weight="11"/>
-
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/btnCart"
-            android:layout_weight="3">
 
             <ImageView
-                android:id="@+id/cartButton"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_shopping_cart_24"
-                android:layout_gravity="center_vertical"/>
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical|start"/>
 
-            <com.nex3z.notificationbadge.NotificationBadge
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/badge"
-                android:layout_toRightOf="@+id/cartButton"
-                android:layout_alignTop="@+id/cartButton"
-                android:layout_marginLeft="10dp"
-                app:nbMaxTextLength="2"
-                />
+            <TextView
+                android:id="@+id/txtPrice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Special Offers on Below Things"
+                android:layout_gravity="center_vertical"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_weight="11"/>
 
-        </FrameLayout>
-    </LinearLayout>
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/btnCart"
+                android:layout_weight="3">
+
+                <ImageView
+                    android:id="@+id/cartButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_shopping_cart_24"
+                    android:layout_gravity="center_vertical"/>
+
+                <com.nex3z.notificationbadge.NotificationBadge
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/badge"
+                    android:layout_toRightOf="@+id/cartButton"
+                    android:layout_alignTop="@+id/cartButton"
+                    android:layout_marginLeft="10dp"
+                    app:nbMaxTextLength="2" />
+
+            </FrameLayout>
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView

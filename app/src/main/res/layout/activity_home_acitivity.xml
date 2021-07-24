@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,6 +9,7 @@
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
+      android:id="@+id/constraintLayout"
       android:layout_height="wrap_content">
 
   <androidx.cardview.widget.CardView
@@ -72,8 +73,9 @@
 
   <androidx.core.widget.NestedScrollView
       android:layout_width="match_parent"
-      app:layout_constraintTop_toBottomOf="@id/etSearchProduct"
+      android:layout_below="@+id/constraintLayout"
       android:layout_height="wrap_content"
+      android:layout_above="@+id/bottomNavigationBar"
       app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
       android:layout_marginTop="@dimen/dp_15"
       app:layout_constraintStart_toStartOf="parent">
@@ -258,6 +260,7 @@
               android:layout_height="wrap_content" />
 
       <Button
+          android:id="@+id/btnViewAllCategories"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/view_all_categories"
@@ -475,6 +478,7 @@
         android:id="@+id/bottomNavigationBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
         app:menu="@menu/bottoom_navigation"
         android:nextFocusUp="@color/black"
@@ -484,4 +488,4 @@
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector" />
 
-</LinearLayout>
+</RelativeLayout>
