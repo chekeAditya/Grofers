@@ -29,9 +29,6 @@ public class SlideAdapter extends SliderViewAdapter<SlideAdapter.SliderAdapterVi
     public void onBindViewHolder(SliderAdapterViewHolder viewHolder, final int position) {
 
         final slideItemLayoutHomeActivity sliderItem = mSliderItems.get(position);
-
-        // Glide is use to load image
-        // from url in your imageview.
         Glide.with(viewHolder.itemView)
                 .load(sliderItem.getUrl())
                 .fitCenter()
