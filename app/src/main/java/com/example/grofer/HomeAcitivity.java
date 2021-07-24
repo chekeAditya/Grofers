@@ -8,10 +8,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.grofer.BrowseCategories.BrowseCategoriesAdapter;
 import com.example.grofer.BrowseCategories.BrowseCategoriesModel;
 import com.example.grofer.BrowseCategories.BrowseItemClickListener;
+import com.example.grofer.BrowseCategoryItemClicked.browseCategories_itemClicked;
 import com.example.grofer.FruitsAndVegetables.FruitVegetableAdapterOne;
 import com.example.grofer.FruitsAndVegetables.FruitsModel;
 import com.example.grofer.FruitsAndVegetables.FruitsVegetableOne;
@@ -32,6 +36,43 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         otherSupplies();
         fruitsVegetablesOne();
         fruitsVegetables();
+        multipleButtonClickListener();
+    }
+
+    private void multipleButtonClickListener() {
+        Button mBtnAddByCategories = findViewById(R.id.btnAddByCategories);
+        mBtnAddByCategories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeAcitivity.this,CategoryActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button mBtnAddLowestPrice = findViewById(R.id.btnAddLowestPrice);
+        mBtnAddLowestPrice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeAcitivity.this,OfferActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button mBtnExploreCategories = findViewById(R.id.btnExploreCategories);
+        mBtnExploreCategories.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeAcitivity.this,OfferActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button btnChotiMotiShoppingBhi = findViewById(R.id.btnChotiMotiShoppingBhi);
+        btnChotiMotiShoppingBhi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeAcitivity.this,MembershipActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void fruitsVegetablesOne() {
@@ -142,11 +183,11 @@ public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickL
         });
     }
 
-
     @Override
     public void browseOnItemClicked(int position, BrowseCategoriesModel browseCategoriesModel) {
-        Intent intent = new Intent(HomeAcitivity.this,CategoryActivity.class);
+        Intent intent = new Intent(HomeAcitivity.this, browseCategories_itemClicked.class);
         startActivity(intent);
+        Toast.makeText(this, "Bird name is " , Toast.LENGTH_SHORT).show();
     }
 }
 

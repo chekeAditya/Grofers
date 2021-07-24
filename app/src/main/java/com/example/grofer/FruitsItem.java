@@ -38,4 +38,5 @@ public class FruitsItem{
 	public String getCategory(){
 		return category;
 	}
+
 }
