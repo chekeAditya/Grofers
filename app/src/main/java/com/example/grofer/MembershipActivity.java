@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -19,7 +20,7 @@ public class MembershipActivity extends AppCompatActivity {
     private ImageView mBtnImageView;
     private Button mBtnProfile;
     private CardView mCardFaqs;
-
+    TextView mTvFaq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class MembershipActivity extends AppCompatActivity {
         mBtnImageView = findViewById(R.id.tvBtnRightAngle);
         mBtnProfile = findViewById(R.id.btnProfile);
         mCardFaqs =findViewById(R.id.cardFaqs);
+        mTvFaq = findViewById(R.id.tvFaq);
         mBtnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,14 +37,14 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
 
-
-        mCardFaqs.setOnClickListener(new View.OnClickListener() {
+        mTvFaq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MembershipActivity.this,FAQS.class);
-                startActivity(intent);
+                Intent intent3 = new Intent(MembershipActivity.this, FAQS.class);
+                startActivity(intent3);
             }
         });
+
     //init and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 
