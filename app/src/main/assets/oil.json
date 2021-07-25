@@ -1,0 +1,70 @@
+{
+  "oilStore": [
+    {
+      "category": "Oil",
+      "price": "167",
+      "discount" : "20% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.166",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/HsTjTHmr/Mustard-Oil.jpg",
+      "description": "Grofers Mother's Choice Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Oil",
+      "price": "161",
+      "discount" : "19% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.160",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/2y76n9Qj/Soyabean-Oil.jpg",
+      "description": "Groffers Mother's Choice Refined Soyabean Oil"
+    },
+    {
+      "category" : "Oil",
+      "price": "160",
+      "discount" : "20% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.166",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/B6cxGSFZ/fortune1-Lsoya.jpg",
+      "description": "Fortune Soya Health Refined soyabean Oil"
+    },
+    {
+      "category" : "Oil",
+      "price": "164",
+      "discount" : "26% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.166",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/K8Rrgh6Q/fortune1-Lmustard.jpg",
+      "description": "Fortune Premium Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Oil",
+      "price": "167",
+      "discount" : "20% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.166",
+      "quantity" : "1l",
+      "avatar":"https://i.postimg.cc/4N3prTxZ/Mother-Choice1-Lmustard-Oil.jpg",
+      "description": "Grofers Mother's Choice Kachi Ghani Mustard Oil"
+    },
+    {
+      "category": "Oil",
+      "price": "856",
+      "discount" : "31% OFF",
+      "ratings" : "3.8",
+      "totalRatings" : "(7775 ratings)",
+      "unlockPrice" : "Rs.166",
+      "quantity" : "5l",
+      "avatar":"https://i.postimg.cc/g0hVNqkZ/Fortune5-LMustard-Oil.jpg",
+      "description": "Fortune Premium Kachi Ghani Mustard Oil-5L(Jar)"
+    }
+  ]
+}

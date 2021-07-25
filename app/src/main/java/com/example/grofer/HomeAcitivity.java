@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.grofer.BrowseCategories.BrowseCategoriesAdapter;
 import com.example.grofer.BrowseCategories.BrowseCategoriesModel;
@@ -22,17 +23,25 @@ import com.smarteist.autoimageslider.SliderView;
 import java.util.ArrayList;
 
 public class HomeAcitivity extends AppCompatActivity implements BrowseItemClickListener {
-
+    EditText mEtSearchProduct;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_acitivity);
+        mEtSearchProduct = findViewById(R.id.etSearchProduct);
         BottomNavigation();
         slideView();
         browseRecyclerView();
         otherSupplies();
         fruitsVegetablesOne();
         multipleButtonClickListener();
+        mEtSearchProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeAcitivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void multipleButtonClickListener() {
