@@ -4,74 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CheckingOut"
-    android:orientation="vertical"
+    android:background="#098bdb"
     android:gravity="center"
-    android:background="#098bdb">
+    android:orientation="vertical"
+    tools:context=".CheckingOut">
 
 
-   <ImageView
-       android:id="@+id/ivCheckMark"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:src="@drawable/ic_check"
-       android:background="@drawable/check_out_bg"
-       />
+    <ImageView
+        android:id="@+id/ivCheckMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/check_out_bg"
+        android:src="@drawable/ic_check" />
+
     <TextView
         android:id="@+id/tvConfirmOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_30"
-        android:textStyle="bold"
-        android:textSize="30sp"
+        android:text="Order Confirmed!"
         android:textColor="#FFFFFF"
-        android:text="Order Confirmed!"/>
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/dp_10"
         android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="@dimen/dp_10"
         android:text="Thank you for your order. You will receive confirmation email shortly"
         android:textAlignment="center"
-        android:textSize="15sp"
         android:textColor="#FFFFFF"
         android:textDirection="locale"
-        />
+        android:textSize="15sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/dp_10"
         android:layout_marginHorizontal="70dp"
+        android:layout_marginVertical="@dimen/dp_10"
         android:text="Track the status of your order on the order tracking page"
         android:textAlignment="center"
-        android:textSize="15sp"
         android:textColor="#FFFFFF"
         android:textDirection="locale"
-        />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/tvBtnContinueShopping"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Continue Shopping"
+        android:layout_marginHorizontal="70dp"
         android:layout_marginTop="@dimen/dp_30"
         android:background="@drawable/continue_shopping"
+        android:text="Continue Shopping"
         android:textColor="#098bdb"
-        android:textSize="18sp"
-        android:layout_marginHorizontal="70dp"
-        />
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/tvBtnTrackOrder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Track Order"
+        android:layout_marginHorizontal="70dp"
         android:layout_marginTop="@dimen/dp_30"
         android:background="@drawable/continue_shopping"
+        android:text="Track Order"
         android:textColor="#098bdb"
-        android:textSize="18sp"
-        android:layout_marginHorizontal="70dp"
-        />
-
+        android:textSize="18sp" />
 
 
 </LinearLayout>

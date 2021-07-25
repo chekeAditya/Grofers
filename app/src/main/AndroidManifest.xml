@@ -16,8 +16,10 @@
         <activity android:name=".CartActivity" />
         <activity android:name=".Profile" />
         <activity android:name=".LowPriceActivity" />
+        <activity android:name=".FAQS" />
         <activity android:name=".OfferActivity" />
         <activity android:name=".CategoryActivity" />
+        <activity android:name=".CheckingOut" />
         <activity android:name=".HomeAcitivity" />
         <activity android:name=".VerifyPhoneNumber" />
         <activity android:name=".oAuth" />
