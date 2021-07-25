@@ -23,7 +23,8 @@ public class SearchActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private RecyclerView recyclerView;
     private FruitsAdapter fruitsAdapter;
-    private OilAdapter oilAdapter;
+    private LowPriceAdapter lowPriceAdapter;
+    private VegetablesAdapter vegetablesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +51,12 @@ public class SearchActivity extends AppCompatActivity {
         mBtnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mSearchCategory.getText().toString().equals("fruits")) {
+                if (mSearchCategory.getText().toString().equals("fruit")) {
                     fetchDataFromAssets();
-                } else {
+                } else if (mSearchCategory.getText().toString().equals("veg")){
+                    fetchDataFromAssets3();
+                }
+                else {
                     fetchDataFromAssets2();
                 }
             }
@@ -101,7 +105,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private void fetchDataFromAssets2() {
         try {
-            InputStream inputStream = getAssets().open("oil.json");
+            InputStream inputStream = getAssets().open("lowestprice.json");
             int data = inputStream.read();
             StringBuffer stringBuffer = new StringBuffer();
             while (data != -1) {
@@ -118,17 +122,51 @@ public class SearchActivity extends AppCompatActivity {
 
     private void buildDataFromJson2(String json) {
         Gson gson = new Gson();
-        Type type = new TypeToken<ResponseFruitsModel>() {
+        Type type = new TypeToken<ResponseLowestPriceModel>() {
         }.getType();
-        ResponseOIlModel responseOIlModel = gson.fromJson(json, type);
-        setRecyclerAdapter2(responseOIlModel);
+        ResponseLowestPriceModel responseLowestPriceModel= gson.fromJson(json, type);
+        setRecyclerAdapter2(responseLowestPriceModel);
         progressBar.setVisibility(View.GONE);
     }
 
-    private void setRecyclerAdapter2(ResponseOIlModel responseOIlModel) {
-        oilAdapter = new OilAdapter(responseOIlModel.getOil());
+    private void setRecyclerAdapter2(ResponseLowestPriceModel responseLowestPriceModel) {
+        lowPriceAdapter = new LowPriceAdapter(responseLowestPriceModel.getLowPriceStore());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(oilAdapter);
+        recyclerView.setAdapter(lowPriceAdapter);
+    }
+
+
+    private void fetchDataFromAssets3() {
+        try {
+            InputStream inputStream = getAssets().open("vegetables.json");
+            int data = inputStream.read();
+            StringBuffer stringBuffer = new StringBuffer();
+            while (data != -1) {
+                char ch = (char) data;
+                stringBuffer.append(ch);
+                data = inputStream.read();
+            }
+            buildDataFromJson3(stringBuffer.toString());
+
+        } catch (Exception e) {
+            Log.d("TAG", e.getMessage());
+        }
+    }
+
+    private void buildDataFromJson3(String json) {
+        Gson gson = new Gson();
+        Type type = new TypeToken<ResponseVegetablesModel>() {
+        }.getType();
+        ResponseVegetablesModel responseVegetablesModel = gson.fromJson(json, type);
+        setRecyclerAdapter3(responseVegetablesModel);
+        progressBar.setVisibility(View.GONE);
+    }
+
+    private void setRecyclerAdapter3(ResponseVegetablesModel responseVegetablesModel) {
+        vegetablesAdapter = new VegetablesAdapter(responseVegetablesModel.getVegetable());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(vegetablesAdapter);
     }
 }

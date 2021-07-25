@@ -14,9 +14,13 @@ import java.io.InputStream;
 import java.lang.reflect.Type;
 import android.annotation.SuppressLint;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+
 import java.util.ArrayList;
 import java.util.List;
 public class CategoryActivity extends AppCompatActivity {
+    EditText mEtSearchProduct;
     BottomNavigationView bottomNavigationView;
     private static final String TAG = CategoryActivity.class.getSimpleName();
     private RecyclerView recyclerView;
@@ -33,9 +37,17 @@ public class CategoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
+        mEtSearchProduct = findViewById(R.id.etSearchProduct);
         startBackgroundThread();
         initViewsAndListeners();
         setRecyclerAdapter();
+        mEtSearchProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CategoryActivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setRecyclerAdapter() {

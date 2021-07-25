@@ -7,17 +7,38 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class OfferActivity extends AppCompatActivity {
+    EditText mEtSearchProduct;
+    ImageButton mImBtnMin30;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_offer);
+        mEtSearchProduct = findViewById(R.id.etSearchProduct);
+        mImBtnMin30 = findViewById(R.id.btnMin30);
         //init and assign variable
+        mImBtnMin30.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent1 = new Intent(OfferActivity.this,LowPriceActivity.class);
+                startActivity(intent1);
+            }
+        });
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
+        mEtSearchProduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OfferActivity.this,SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
         //set home Selected
         bottomNavigationView.setSelectedItemId(R.id.offersIcon);
