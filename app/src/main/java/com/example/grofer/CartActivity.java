@@ -76,7 +76,7 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
         mBtnCheckoutCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent cartIntent = new Intent(CartActivity.this, CheckingOut.class);
+                Intent cartIntent = new Intent(CartActivity.this, VerifyPhoneNumber.class);
                 startActivity(cartIntent);
             }
         });

@@ -1,33 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     tools:context=".VerifyPhoneNumber">
 
-    <EditText
+    <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_20"
-        android:id="@+id/etOtp"
-        android:padding="@dimen/dp_20"
-        android:hint="otp"/>
+        android:layout_height="60dp"
+        android:background="@color/white"/>
 
     <Button
+        android:id="@+id/btnBackLogin"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_30"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/ic_baseline_arrow_back_24"/>
+
+    <TextView
+        android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnVerifyLogin"
-        android:padding="@dimen/dp_20"
-        android:text="Verify"/>
+        android:text="@string/login"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/dp_20"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_toEndOf="@+id/btnBackLogin"/>
 
-    <ProgressBar
-        android:layout_margin="@dimen/dp_20"
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/view"
+        android:id="@+id/cardViewLogin"
+        android:elevation="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmation"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/grey"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    style="@style/EditTextLogin"
+                    android:layout_gravity="center"
+                    android:text="@string/_91"/>
+
+                <EditText
+                    android:id="@+id/idEdtPhoneNumber"
+                    style="@style/EditTextLogin"
+                    android:layout_gravity="center"
+                    android:hint="@string/phone_number"
+                    android:textColorHint="@color/cyan"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/idEdtOtp"
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:background="@drawable/rectangle"
+                android:layout_margin="20dp"
+                android:textAlignment="center"
+                android:hint="Enter OTP Here"/>
+
+            <Button
+                android:id="@+id/idBtnGetOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:layout_marginTop="@dimen/dp_20"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@id/cardViewLogin"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_height="1dp"
+        android:background="@color/cyan"/>
+
+    <Button
+        android:layout_below="@id/view2"
+        android:id="@+id/idBtnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/one_touch_login_with_truecaller"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/truecallr"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/blue"
+        android:paddingStart="70dp"
+        android:textColor="@color/white"/>
 
 
-</LinearLayout>
+</RelativeLayout>

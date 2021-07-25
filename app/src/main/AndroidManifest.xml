@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.grofer">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/groferlog"
@@ -11,7 +13,9 @@
         android:theme="@style/Theme.Grofer">
         <activity android:name=".VideoActivity"></activity>
         <activity android:name=".SearchActivity" />
-        <activity android:name=".ConfirmedOrder" />
+        <activity android:name=".ConfirmedOrder"
+            android:theme="@style/Theme.CheckingPage">
+        </activity>
         <activity android:name=".MembershipActivity" />
         <activity android:name=".browseCategories_itemClicked" />
         <activity android:name=".CartActivity" />
@@ -23,7 +27,6 @@
         <activity android:name=".CheckingOut" />
         <activity android:name=".HomeAcitivity" />
         <activity android:name=".VerifyPhoneNumber" />
-        <activity android:name=".oAuth" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.SplashScreen">
