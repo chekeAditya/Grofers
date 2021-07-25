@@ -293,6 +293,7 @@
                             android:layout_height="120dp"
                             android:src="@drawable/faqs_img"/>
                         <TextView
+                            android:id="@+id/tvFaq"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Frequently Asked Questions"
