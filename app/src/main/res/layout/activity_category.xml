@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -29,25 +29,24 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        app:layout_constraintEnd_toStartOf="@+id/btnProfile"
+        android:layout_toStartOf="@+id/btnProfile"
         android:layout_width="@dimen/dp_30"
         android:layout_height="30dp"
         android:layout_marginTop="@dimen/dp_20"
         android:layout_marginEnd="@dimen/dp_20"
         android:id="@+id/btnCart"
-        app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/ic_baseline_shopping_cart_24"/>
 
     <Button
         android:id="@+id/btnProfile"
         android:layout_width="@dimen/dp_30"
+        android:layout_alignParentEnd="true"
         android:layout_height="@dimen/dp_30"
         android:background="@drawable/ic_baseline_person_pin_24"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/dp_20"/>
 
     <EditText
+        android:layout_below="@+id/viewHomeActivity"
         android:id="@+id/etSearchProduct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -63,27 +62,17 @@
         android:drawableStart="@drawable/ic_baseline_search_24"/>
 
     <LinearLayout
+        android:layout_below="@+id/etSearchProduct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigationBar"
         android:orientation="vertical"
-        android:layout_marginTop="125dp"
         tools:context=".CategoryActivity">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
-
-    <androidx.cardview.widget.CardView
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="5dp"
-        app:cardElevation="@dimen/dp_20"
-        app:cardCornerRadius="@dimen/dp_5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="@dimen/dp_20">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationBar"
@@ -98,6 +87,5 @@
         app:itemTextColor="@drawable/selector"
         app:itemIconTint="@drawable/selector"
         android:layout_alignParentBottom="true" />
-    </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
