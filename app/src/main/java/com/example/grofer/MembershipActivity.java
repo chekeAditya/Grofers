@@ -35,14 +35,16 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
 
-
         mCardFaqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MembershipActivity.this,FAQS.class);
-                startActivity(intent);
+                Intent intentFaqs = new Intent(MembershipActivity.this, FrequentlyAskedQuestions.class);
+                startActivity(intentFaqs);
             }
         });
+
+
+
     //init and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationBar);
 

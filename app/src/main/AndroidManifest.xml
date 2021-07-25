@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Grofer">
-        <activity android:name=".ConfirmedOrder"></activity>
+        <activity android:name=".FrequentlyAskedQuestions"></activity>
+        <activity android:name=".CheckingOut" />
+        <activity android:name=".ConfirmedOrder" />
         <activity android:name=".MembershipActivity" />
         <activity android:name=".browseCategories_itemClicked" />
         <activity android:name=".CartActivity" />

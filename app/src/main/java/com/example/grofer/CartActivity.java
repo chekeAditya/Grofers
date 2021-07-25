@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -42,6 +43,7 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
     ImageView btnBack;
     @BindView(R.id.txtTotal)
     TextView txtTotal;
+    private ImageView mBtnCheckoutCart;
 
     ICartLoadListener cartLoadListener;
 
@@ -68,8 +70,17 @@ public class CartActivity extends AppCompatActivity implements ICartLoadListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
+        mBtnCheckoutCart = findViewById(R.id.btnCheckoutCart);
         initViews();
         loadCartFromFirebase();
+        mBtnCheckoutCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent cartIntent = new Intent(CartActivity.this, CheckingOut.class);
+                startActivity(cartIntent);
+            }
+        });
+
     }
 
     private void loadCartFromFirebase() {

@@ -131,7 +131,7 @@
                         >
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:background="#FFFFFF"
                             android:gravity="center"
@@ -160,7 +160,7 @@
                                 />
                             <Button
                                 android:id="@+id/tvTrialButton"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="@dimen/dp_5"
                                 android:text="Select"
@@ -172,7 +172,7 @@
                      </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:padding="@dimen/dp_5"
                             android:background="#FFFFFF"
@@ -182,7 +182,7 @@
                             >
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
                                 android:gravity="center"
@@ -191,7 +191,7 @@
 
                                 <TextView
                                     android:id="@+id/tvSixMonthsPlanCard"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="@dimen/dp_5"
                                     android:layout_margin="@dimen/dp_10"
@@ -211,7 +211,7 @@
                                     />
                                 <Button
                                     android:id="@+id/tvSixMonthsPlanButton"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="@dimen/dp_5"
                                     android:text="Select"
@@ -223,7 +223,7 @@
                         </androidx.cardview.widget.CardView>
 
                         <androidx.cardview.widget.CardView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:padding="@dimen/dp_5"
                             android:background="#FFFFFF"
@@ -233,7 +233,7 @@
                             >
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="#FFFFFF"
                                 android:gravity="center"
@@ -242,7 +242,7 @@
 
                                 <TextView
                                     android:id="@+id/tvTwelveMonthsPlanCard"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="@dimen/dp_5"
                                     android:layout_margin="@dimen/dp_10"
@@ -262,7 +262,7 @@
                                     />
                                 <Button
                                     android:id="@+id/tvTwelveMonthsPlanButton"
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:padding="@dimen/dp_5"
                                     android:text="Select"
