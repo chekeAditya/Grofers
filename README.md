@@ -5,6 +5,16 @@ Grofers is an m-commerce(mobile-commerce) marketplace for your daily shopping.
 
 It allows you to shop from your favorite store in your neighborhood. You can shop for groceries, Fruits & Vegetables, Bakery items, Flowers, Meats, Pet Care, Baby Care, and Cosmetics products with just a few taps
 
+## Grofer Application template 
+
+![](Grofer%20Template.png)
+
+
+## Links 
+
+* Youtube :- https://youtu.be/t-q4CmhIuEs
+* Blog Post :- https://medium.com/@chekeaditya/how-i-build-clone-of-m-commerce-grofer-application-2633c358a733
+
 ## Things we using while making this application
 
 This project is used by the following companies:
@@ -14,12 +24,6 @@ This project is used by the following companies:
 - Recycler View
 - Retrofit Library
 - Permissions
-
-  
-## Appendix
-
-Any additional information goes here
-
   
 ## Lessons Learned
 
