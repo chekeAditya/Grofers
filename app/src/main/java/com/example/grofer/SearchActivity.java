@@ -51,9 +51,9 @@ public class SearchActivity extends AppCompatActivity {
         mBtnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mSearchCategory.getText().toString().equals("fruit")) {
+                if (mSearchCategory.getText().toString().equals("fruits")) {
                     fetchDataFromAssets();
-                } else if (mSearchCategory.getText().toString().equals("veg")){
+                } else if (mSearchCategory.getText().toString().equals("vegetables")){
                     fetchDataFromAssets3();
                 }
                 else {
