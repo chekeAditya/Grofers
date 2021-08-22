@@ -12,7 +12,6 @@
     <string name="earliest_slot_tomorrow_7_pm">Earliest slot: Tomorrow 7 PM</string>
     <string name="limited_slots_only">Limited Slots only</string>
     <string name="welcome_to_grofers">welcome to grofers!</string>
-    <string name="todo">TODO</string>
     <string name="pune">Pune</string>
     <string name="browse_categories">Browse Categories</string>
     <string name="other_supplies">Other Supplies</string>
@@ -23,4 +22,8 @@
     <string name="up_to_69_off">Up to 69% OFF</string>
     <string name="grocery_and_staples">Grocery and Staples</string>
     <string name="pulses_atta_and_others_flours_rice_and_other_grains_dry_fruits_and_nuts">Pulses,Atta and Others Flours,Rice and other Grains,Dry Fruits and Nuts</string>
+    <string name="aurangabad_maharastra">Aurangabad, Maharastra</string>
+    <string name="todo">TODO</string>
+    <string name="fast_delivery">fast delivery</string>
+    <string name="lowest_price">lowest price</string>
 </resources>

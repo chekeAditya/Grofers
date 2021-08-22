@@ -7,7 +7,7 @@
     android:background="#098bdb"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".CheckingOut">
+    tools:context=".Activity.CheckingOut">
 
 
     <ImageView

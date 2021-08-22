@@ -1,5 +1,6 @@
 package com.example.grofer.Adapter;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -28,8 +29,8 @@ import butterknife.Unbinder;
 
 public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.MyCartViewHolder> {
 
-    private Context context;
-    private List<CartModel> cartModelList;
+    private final Context context;
+    private final List<CartModel> cartModelList;
 
     public MyCartAdapter(Context context, List<CartModel> cartModelList) {
         this.context = context;
@@ -52,14 +53,10 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.MyCartView
         holder.txtQuantity.setText(new StringBuilder().append(cartModelList.get(position).getQuantity()));
 
         //Btn Minus
-        holder.btnMinus.setOnClickListener(v -> {
-            minusCartItem(holder, cartModelList.get(position));
-        });
+        holder.btnMinus.setOnClickListener(v -> minusCartItem(holder, cartModelList.get(position)));
 
         //Btn Plus
-        holder.btnPlus.setOnClickListener(v -> {
-            plusCartItem(holder, cartModelList.get(position));
-        });
+        holder.btnPlus.setOnClickListener(v -> plusCartItem(holder, cartModelList.get(position)));
 
         //btn delete
         holder.btnDelete.setOnClickListener(v -> {
@@ -121,20 +118,27 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.MyCartView
         return cartModelList.size();
     }
 
-    public class MyCartViewHolder extends RecyclerView.ViewHolder {
+    public static class MyCartViewHolder extends RecyclerView.ViewHolder {
 
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.btnMinus)
         ImageView btnMinus;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.btnPlus)
         ImageView btnPlus;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.btnDelete)
         ImageView btnDelete;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.imageView)
         ImageView imageView;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.txtName)
         TextView txtName;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.txtPrice)
         TextView txtPrice;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.txtQuantity)
         TextView txtQuantity;
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.grofer">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
@@ -10,26 +11,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Grofer">
-        <activity android:name=".VideoActivity"></activity>
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".ConfirmedOrder"
+        android:theme="@style/Theme.Grofer"
+        tools:ignore="AllowBackup">
+        <activity android:name=".Activity.VideoActivity"/>
+        <activity android:name=".Activity.SearchActivity" />
+        <activity android:name=".Activity.ConfirmedOrder"
             android:theme="@style/Theme.CheckingPage">
         </activity>
-        <activity android:name=".MembershipActivity" />
-        <activity android:name=".browseCategories_itemClicked" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".Profile" />
-        <activity android:name=".LowPriceActivity" />
-        <activity android:name=".FAQS" />
-        <activity android:name=".OfferActivity" />
-        <activity android:name=".CategoryActivity" />
-        <activity android:name=".CheckingOut" />
-        <activity android:name=".HomeAcitivity" />
-        <activity android:name=".VerifyPhoneNumber" />
+        <activity android:name=".Activity.MembershipActivity" />
+        <activity android:name=".Extras.browseCategories_itemClicked" />
+        <activity android:name=".Activity.CartActivity" />
+        <activity android:name=".model.Profile" />
+        <activity android:name=".Activity.LowPriceActivity" />
+        <activity android:name=".Activity.FAQS" />
+        <activity android:name=".Activity.OfferActivity" />
+        <activity android:name=".Activity.CategoryActivity" />
+        <activity android:name=".Activity.CheckingOut" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.VerifyPhoneNumber" />
         <activity
-            android:name=".SplashScreen"
-            android:theme="@style/Theme.SplashScreen">
+            android:name=".Activity.SplashScreen"
+            android:theme="@style/Theme.SplashScreen"
+            tools:ignore="IntentFilterExportedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

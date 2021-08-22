@@ -7,10 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.grofer.FruitsItem;
 import com.example.grofer.R;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 

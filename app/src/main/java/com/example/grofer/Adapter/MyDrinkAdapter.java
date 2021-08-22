@@ -1,5 +1,6 @@
 package com.example.grofer.Adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,9 +36,9 @@ import butterknife.Unbinder;
 
 public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkViewHolder> {
 
-    private Context context;
-    private List<DrinkModel> drinkModelsList;
-    private ICartLoadListener iCartLoadListener;
+    private final Context context;
+    private final List<DrinkModel> drinkModelsList;
+    private final ICartLoadListener iCartLoadListener;
 
     public MyDrinkAdapter(Context context, List<DrinkModel> drinkModelsList, ICartLoadListener iCartLoadListener) {
         this.context = context;
@@ -61,10 +62,7 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
         holder.txtName.setText(new StringBuilder().append(drinkModelsList.get(position).getName()));
 
         //holder for item added to cart
-        holder.setListener((view, adapterPosition) -> {
-            addTocart(drinkModelsList.get(position));
-
-        });
+        holder.setListener((view, adapterPosition) -> addTocart(drinkModelsList.get(position)));
     }
 
     private void addTocart(DrinkModel drinkModel) {
@@ -78,18 +76,15 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
                         if (snapshot.exists()) { //if user already have item in cart
                             //just update and totalPrice
                             CartModel cartModel = snapshot.getValue(CartModel.class);
+                            assert cartModel != null;
                             cartModel.setQuantity(cartModel.getQuantity() + 1);
                             Map<String, Object> updateData = new HashMap<>();
                             updateData.put("quantity", cartModel.getQuantity() + 1);
                             updateData.put("totalPrice", cartModel.getQuantity()*Float.parseFloat(cartModel.getPrice()));
                             userCart.child(drinkModel.getKey())
                                     .updateChildren(updateData)
-                                    .addOnSuccessListener(unused -> {
-                                        iCartLoadListener.onCartLoadFailed("Add to cart Success");
-                                    })
-                                    .addOnFailureListener(e -> {
-                                        iCartLoadListener.onCartLoadFailed(e.getMessage());
-                                    });
+                                    .addOnSuccessListener(unused -> iCartLoadListener.onCartLoadFailed("Add to cart Success"))
+                                    .addOnFailureListener(e -> iCartLoadListener.onCartLoadFailed(e.getMessage()));
 
 
                         } else { //if item not have in cart, add new
@@ -102,12 +97,8 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
                             cartModel.setTotalPrice(Float.parseFloat(drinkModel.getPrice()));
                             userCart.child(drinkModel.getKey())
                                     .setValue(cartModel)
-                                    .addOnSuccessListener(unused -> {
-                                        iCartLoadListener.onCartLoadFailed("Add to cart Success");
-                                    })
-                                    .addOnFailureListener(e -> {
-                                        iCartLoadListener.onCartLoadFailed(e.getMessage());
-                                    });
+                                    .addOnSuccessListener(unused -> iCartLoadListener.onCartLoadFailed("Add to cart Success"))
+                                    .addOnFailureListener(e -> iCartLoadListener.onCartLoadFailed(e.getMessage()));
                         }
                         EventBus.getDefault().postSticky(new MyUpdateCartEvent());
                     }
@@ -125,12 +116,15 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
     }
 
 
-    public class MyDrinkViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public static class MyDrinkViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.imageView)
         ImageView imageView;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.txtName)
         TextView txtName;
+        @SuppressLint("NonConstantResourceId")
         @BindView(R.id.txtPrice)
         TextView txtPrice;
 
@@ -142,11 +136,9 @@ public class MyDrinkAdapter extends RecyclerView.Adapter<MyDrinkAdapter.MyDrinkV
         }
 
 
-        private Unbinder unbinder;
-
         public MyDrinkViewHolder(@NonNull View itemView) {
             super(itemView);
-            unbinder = ButterKnife.bind(this, itemView);
+            Unbinder unbinder = ButterKnife.bind(this, itemView);
             itemView.setOnClickListener(this);
         }
 
