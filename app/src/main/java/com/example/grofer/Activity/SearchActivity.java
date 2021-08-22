@@ -1,4 +1,4 @@
-package com.example.grofer.Activity;
+package com.example.grofer;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,14 +9,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-
-import com.example.grofer.Adapter.FruitsAdapter;
-import com.example.grofer.Adapter.LowPriceAdapter;
-import com.example.grofer.R;
-import com.example.grofer.model.ResponseFruitsModel;
-import com.example.grofer.model.ResponseLowestPriceModel;
-import com.example.grofer.model.ResponseVegetablesModel;
-import com.example.grofer.Adapter.VegetablesAdapter;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -26,8 +18,13 @@ import java.lang.reflect.Type;
 public class SearchActivity extends AppCompatActivity {
     private EditText mSearchCategory;
     private Button mBtnSearch;
+    private View mBackInSearch;
+    private String Category;
     private ProgressBar progressBar;
     private RecyclerView recyclerView;
+    private FruitsAdapter fruitsAdapter;
+    private LowPriceAdapter lowPriceAdapter;
+    private VegetablesAdapter vegetablesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,22 +35,30 @@ public class SearchActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.shopRecyclerView);
         mSearchCategory = findViewById(R.id.etSearchItem);
         mBtnSearch = findViewById(R.id.btnSearchItem);
-        View mBackInSearch = findViewById(R.id.backInSearch);
+        mBackInSearch = findViewById(R.id.backInSearch);
 
-        mBackInSearch.setOnClickListener(v -> finish());
+        mBackInSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
     @Override
     protected void onStart() {
         super.onStart();
 
-        mBtnSearch.setOnClickListener(v -> {
-            if (mSearchCategory.getText().toString().equals("fruit")) {
-                fetchDataFromAssets();
-            } else if (mSearchCategory.getText().toString().equals("veg")){
-                fetchDataFromAssets3();
-            }
-            else {
-                fetchDataFromAssets2();
+        mBtnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mSearchCategory.getText().toString().equals("fruits")) {
+                    fetchDataFromAssets();
+                } else if (mSearchCategory.getText().toString().equals("vegetables")){
+                    fetchDataFromAssets3();
+                }
+                else {
+                    fetchDataFromAssets2();
+                }
             }
         });
     }
@@ -67,13 +72,14 @@ public class SearchActivity extends AppCompatActivity {
         try {
             InputStream inputStream = getAssets().open("fruits.json");
             int data = inputStream.read();
-            StringBuilder stringBuffer = new StringBuilder();
+            StringBuffer stringBuffer = new StringBuffer();
             while (data != -1) {
                 char ch = (char) data;
                 stringBuffer.append(ch);
                 data = inputStream.read();
             }
             buildDataFromJson(stringBuffer.toString());
+
         } catch (Exception e) {
             Log.d("TAG", e.getMessage());
         }
@@ -89,7 +95,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void setRecyclerAdapter(ResponseFruitsModel responseFruitsModel) {
-        FruitsAdapter fruitsAdapter = new FruitsAdapter(responseFruitsModel.getFruits());
+        fruitsAdapter = new FruitsAdapter(responseFruitsModel.getFruits());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(fruitsAdapter);
@@ -101,7 +107,7 @@ public class SearchActivity extends AppCompatActivity {
         try {
             InputStream inputStream = getAssets().open("lowestprice.json");
             int data = inputStream.read();
-            StringBuilder stringBuffer = new StringBuilder();
+            StringBuffer stringBuffer = new StringBuffer();
             while (data != -1) {
                 char ch = (char) data;
                 stringBuffer.append(ch);
@@ -124,7 +130,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void setRecyclerAdapter2(ResponseLowestPriceModel responseLowestPriceModel) {
-        LowPriceAdapter lowPriceAdapter = new LowPriceAdapter(responseLowestPriceModel.getLowPriceStore());
+        lowPriceAdapter = new LowPriceAdapter(responseLowestPriceModel.getLowPriceStore());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(lowPriceAdapter);
@@ -135,7 +141,7 @@ public class SearchActivity extends AppCompatActivity {
         try {
             InputStream inputStream = getAssets().open("vegetables.json");
             int data = inputStream.read();
-            StringBuilder stringBuffer = new StringBuilder();
+            StringBuffer stringBuffer = new StringBuffer();
             while (data != -1) {
                 char ch = (char) data;
                 stringBuffer.append(ch);
@@ -158,7 +164,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void setRecyclerAdapter3(ResponseVegetablesModel responseVegetablesModel) {
-        VegetablesAdapter vegetablesAdapter = new VegetablesAdapter(responseVegetablesModel.getVegetable());
+        vegetablesAdapter = new VegetablesAdapter(responseVegetablesModel.getVegetable());
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(vegetablesAdapter);
