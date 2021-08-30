@@ -22,7 +22,7 @@ It allows you to shop from your favorite store in your neighborhood. You can sho
 * [AutoImageSlider](https://github.com/smarteist/Android-Image-Slider)
 * [NotificationBadge](https://github.com/nex3z/NotificationBadge)
 
-## Things we using while making this application
+## Things we used while making this application
 
 This project is used by the following companies:
 
