@@ -24,8 +24,6 @@ It allows you to shop from your favorite store in your neighborhood. You can sho
 
 ## Things we used while making this application
 
-This project is used by the following companies:
-
 - GitHub
 - Firebase
 - Recycler View
