@@ -7,7 +7,8 @@ It allows you to shop from your favorite store in your neighborhood. You can sho
 
 ## Grofer Application template 
 
-![](Grofer%20Template.png)
+![grofoer-clone](https://user-images.githubusercontent.com/81345503/143855062-537b3f68-0688-4857-8090-d971a6747048.png)
+
 
 
 ## Links 
